@@ -1,1 +1,1 @@
-web: gunicorn calculator2_app:app
+web: python routes.py
