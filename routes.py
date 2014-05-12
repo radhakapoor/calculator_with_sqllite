@@ -1,9 +1,10 @@
 from flask import Flask, render_template
 import flask
 from flask.ext.sqlalchemy import SQLAlchemy
+import os
  
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 class Calculation(db.Model):
