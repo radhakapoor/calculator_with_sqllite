@@ -1,5 +1,4 @@
 *.pyc
 .DS_Store
-bin/
-include/
-lib/python2.7/
+venv
+.env
